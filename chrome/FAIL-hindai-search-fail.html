@@ -1,0 +1,577 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>test-suite results</title>
+    <style type='text/css'>
+      body, table {
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 12px;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th, td {
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      div, pre {
+        display: table;
+        margin: 0;
+      }
+
+      pre {
+        border: 1px solid #ccc;
+      }
+
+      .box, .lbox, .rbox {
+        border: 1px solid #ccc;
+      }
+
+      .lbox {
+        float: left;
+        margin: 0.5em;
+      }
+
+      .rbox {
+        float: right;
+        margin: 0.5em;
+      }
+
+      .lbox th, .rbox th {
+        text-align: right;
+      }
+
+      .command_line {
+        margin: 0.5em;
+      }
+
+      .command_line th {
+        text-align: left;
+      }
+
+      .command_line td {
+        border: 1px solid #ccc;
+        padding: 0.5ex 0.5em;
+        font-family: monospace;
+        line-height: 200%;
+      }
+
+      .arg {
+        white-space: nowrap;
+        border: 1px solid #ccc;
+        padding: 1px;
+        background-color: #efe;
+      }
+
+      .selenium {
+        border: 1px solid black;
+        margin: 0.5em;
+      }
+
+      .selenium th, .selenium td {
+        text-align: left;
+        border: 1px solid black;
+      }
+
+      .title {
+        font-style: italic;
+      }
+
+      .selected {
+        background-color: #ffffcc;
+      }
+
+      .indexh {
+        text-align: center;
+      }
+
+      .index {
+        text-align: right;
+      }
+
+      .status_unexecuted .cmd_status_unexecuted {
+      }
+
+      .status_success {
+        background-color: #ccffcc;
+      }
+
+      .cmd_status_success {
+        background-color: #eeffee;
+      }
+
+      .status_warning, .cmd_status_warning {
+        background-color: #ffcccc;
+      }
+
+      .status_failure, .cmd_status_failure {
+        background-color: #ffcccc;
+      }
+
+      .status_error, .cmd_status_error {
+        background-color: #ffcccc;
+      }
+
+      .breakpoint {
+        background-color: #cccccc;
+        border: 1px solid black;
+      }
+
+      .number {
+        text-align: right;
+      }
+
+      .tabs {
+          position: relative;
+          padding: 0;
+      }
+      
+      .tabs ul {
+          margin: 0;
+          padding: 0;
+      }
+      
+      .tabs li {
+          list-style: none;
+          display: inline-block;
+      }
+      
+      .tabs input[type=radio] {
+          display: none;
+      }
+      
+      .tabs label {
+          z-index: 2;
+          position: absolute;
+          top: 0;
+          display: block;
+          background-color: #999;
+          color: #fff;
+          border-style: solid solid none;
+          border-width: 1px;
+          border-color: black;
+          width: 6em;
+          height: 2.5ex;
+          padding: 0.5ex 0.5em;
+          text-align: center;
+      }
+      
+      .tabs label:hover {
+          cursor: pointer;
+          background-color: #ccc;
+          color: #000;
+      }
+      
+      .tabs input[type=radio]:checked + label {
+          background-color: #fff;
+          color: #000;
+      }
+      
+      .tab_source {
+          left: 0;
+      }
+      
+      .tab_sequence {
+          left: 7.5em;
+      }
+      
+      .tab_log {
+          left: 15em;
+      }
+      
+      .tabs .contents {
+          z-index: 1;
+          display: none;
+          background: #fff;
+          border: solid 1px black;
+          margin-top: 3.5ex;
+          padding: 0.5em;
+          min-width: 22.5em;
+      }
+      
+      .tabs input[type=radio]:checked + label + .contents {
+          display: block;
+      }
+      
+      .tabs p {
+        margin: 0;
+        line-height: 180%;
+      }
+
+      .info {
+        margin-bottom: 0.5ex;
+      }
+
+      .info th {
+        text-align: right;
+      }
+    </style>
+    <script type="text/javascript"><!--
+      // for Safari broken css handling.
+      function selectTab(label) {
+        var selConts = label.parentNode.getElementsByClassName('contents')[0];
+        var forId = label.htmlFor;
+        var tabId = document.getElementById(forId).name;
+        var contents = document.getElementById(tabId).getElementsByClassName('contents');
+        for (var i = 0; i < contents.length; i++) {
+          var c = contents[i];
+          if (c == selConts)
+            c.style.display = 'block';
+          else
+            c.style.display = 'none';
+        }
+      }
+ --></script>
+  </head>
+  <body>
+    <h1>test-suite results</h1>
+
+    <div class="box">
+      <div style="overflow: hidden">
+        <table class="lbox">
+          <tr>
+            <th>Result:</th><td>failure</td>
+          </tr>
+          <tr>
+            <th>Start Time:</th><td>2016-01-19 11:04:19.684 +09:00</td>
+          </tr>
+          <tr>
+            <th>Total Time:</th><td>9.574sec</td>
+          </tr>
+          <tr>
+            <th>Number of Test Total:</th><td>1</td>
+          </tr>
+          <tr>
+            <th>Number of Test Passes:</th><td>0</td>
+          </tr>
+          <tr>
+            <th>Number of Test Failures:</th><td>1</td>
+          </tr>
+          <tr>
+            <th>Number of Command Passes:</th><td>4</td>
+          </tr>
+          <tr>
+            <th>Number of Command Failures:</th><td>1</td>
+          </tr>
+          <tr>
+            <th>Number of Command Errors:</th><td>0</td>
+          </tr>
+        </table>
+        <table class="rbox">
+          <tr>
+            <th>Selenese Runner Version:</th><td>2.2.0</td>
+          </tr>
+          <tr>
+            <th>WebDriver Name:</th><td>ChromeDriver</td>
+          </tr>
+          <tr>
+            <th>Selenium Version:</th><td>2.48.2</td>
+          </tr>
+          <tr>
+            <th>Java Version:</th><td>1.8.0_66</td>
+          </tr>
+          <tr>
+            <th>Java VM Name:</th><td>Java HotSpot(TM) 64-Bit Server VM</td>
+          </tr>
+          <tr>
+            <th>Operating System:</th><td>Windows 7 6.1 (amd64)</td>
+          </tr>
+          <tr>
+            <th>Language:</th><td>ja</td>
+          </tr>
+          <tr>
+            <th>Country:</th><td>JP</td>
+          </tr>
+          <tr>
+            <th>Time Zone:</th><td>Asia/Tokyo</td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <table class="command_line">
+          <tr><th>Command Line Arguments:</th></tr>
+          <tr><td><span class="arg">-d</span> <span class="arg">chrome</span> <span class="arg">--chromedriver</span> <span class="arg">drivers/win/chromedriver.exe</span> <span class="arg">--html-result</span> <span class="arg">test-results/chrome</span> <span class="arg">--screenshot-on-fail</span> <span class="arg">test-results/screenshots</span> <span class="arg">hindai-search-fail.html</span> </td></tr>
+        </table>
+      </div>
+
+      <div>
+        <table id="suiteTable" class="selenium">
+          <tr class="title status_failure"><th>test-suite</th></tr>
+
+  
+  
+          <tr class="status_failure"><td><a href="#testCase1">test-suite</a></td></tr>
+  
+
+        </table>
+      </div>
+    </div>
+
+
+  
+    <br>
+    <div class="tabs" id="tab1">
+      <ul>
+        <li>
+          <input name="tab1" id="tab1_source" type="radio" checked>
+          <label for="tab1_source" class="tab_source" onclick="selectTab(this)"><a name="testCase1">Source</a></label>
+          <div class="contents">
+            <table class="info"><tr><th>Source:</th><td>hindai-search-fail.html</td></tr></table>
+            <table cellpadding="1" cellspacing="1" border="1">
+              <thead>
+                <tr class="title status_failure"><td class="indexh">#</td><td rowspan="1" colspan="3">test-suite</td><td>&Delta;t(ms)</td><td>Screenshot</td></tr>
+              </thead>
+              <tbody>
+    
+                <tr class="cmd_status_success">
+                  <td class="index">1</td>
+      
+                  <td>open</td>
+      
+                  <td>/</td>
+      
+                  <td></td>
+      
+                  <td class="number">1,718</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_success">
+                  <td class="index">2</td>
+      
+                  <td>type</td>
+      
+                  <td>id=srchtxt</td>
+      
+                  <td>ヒン大</td>
+      
+                  <td class="number">154</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_success">
+                  <td class="index">3</td>
+      
+                  <td>clickAndWait</td>
+      
+                  <td>id=srchbtn</td>
+      
+                  <td></td>
+      
+                  <td class="number">1,559</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_success">
+                  <td class="index">4</td>
+      
+                  <td>clickAndWait</td>
+      
+                  <td>link=ヒンシツ大学 » ヒンシツ大学 | 株式会社SHIFT</td>
+      
+                  <td></td>
+      
+                  <td class="number">5,523</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_failure">
+                  <td class="index">5</td>
+      
+                  <td>type</td>
+      
+                  <td>id=hogehoge</td>
+      
+                  <td>テスト自動化　入門</td>
+      
+                  <td class="number">594</td>
+                  <td><a href="../screenshots/hindai-search-fail_20160119_110428903_5_fail.png">1:fail</a></td>
+                </tr>
+    
+                <tr class="cmd_status_unexecuted">
+                  <td class="index">6</td>
+      
+                  <td>clickAndWait</td>
+      
+                  <td>id=searchsubmit</td>
+      
+                  <td></td>
+      
+                  <td class="number"></td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_unexecuted">
+                  <td class="index">7</td>
+      
+                  <td>clickAndWait</td>
+      
+                  <td>link=テスト自動化 入門編</td>
+      
+                  <td></td>
+      
+                  <td class="number"></td>
+                  <td></td>
+                </tr>
+    
+              </tbody>
+            </table>
+          </div><!-- contents -->
+        </li><!-- no white spaces between LI tags.
+     --><li>
+          <input name="tab1" id="tab1_sequence" type="radio">
+          <label for="tab1_sequence" class="tab_sequence" onclick="selectTab(this)">Sequence</label>
+          <div class="contents">
+            <table class="info">
+              <tr><th>Start Time:</th><td>2016-01-19 11:04:19 +09:00</td></tr>
+              <tr><th>End Time:</th><td>2016-01-19 11:04:29 +09:00</td></tr>
+              <tr><th>Duration:</th><td>9,553 ms</td></tr>
+            </table>
+            <table cellpadding="1" cellspacing="1" border="1">
+              <thead>
+                <tr class="title status_failure"><td>Time</td><td>&Delta;t(ms)</td><td>Seq.</td><td class="indexh">#</td><td rowspan="1" colspan="3">test-suite</td><td>Result</td><td>Screenshot</td></tr>
+              </thead>
+              <tbody>
+    
+                <tr class="cmd_status_success">
+                  <td>11:04:19.708</td>
+                  <td class="number">1,718</td>
+                  <td>1</td>
+                  <td class="index">1</td>
+      
+                  <td>open</td>
+      
+                  <td>/</td>
+      
+                  <td></td>
+      
+                  <td>[Success]</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_success">
+                  <td>11:04:21.426</td>
+                  <td class="number">154</td>
+                  <td>2</td>
+                  <td class="index">2</td>
+      
+                  <td>type</td>
+      
+                  <td>id=srchtxt</td>
+      
+                  <td>ヒン大</td>
+      
+                  <td>[Success]</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_success">
+                  <td>11:04:21.580</td>
+                  <td class="number">1,559</td>
+                  <td>3</td>
+                  <td class="index">3</td>
+      
+                  <td>clickAndWait</td>
+      
+                  <td>id=srchbtn</td>
+      
+                  <td></td>
+      
+                  <td>[Success]</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_success">
+                  <td>11:04:23.139</td>
+                  <td class="number">5,523</td>
+                  <td>4</td>
+                  <td class="index">4</td>
+      
+                  <td>clickAndWait</td>
+      
+                  <td>link=ヒンシツ大学 » ヒンシツ大学 | 株式会社SHIFT</td>
+      
+                  <td></td>
+      
+                  <td>[Success]</td>
+                  <td></td>
+                </tr>
+    
+                <tr class="cmd_status_failure">
+                  <td>11:04:28.662</td>
+                  <td class="number">594</td>
+                  <td>5</td>
+                  <td class="index">5</td>
+      
+                  <td>type</td>
+      
+                  <td>id=hogehoge</td>
+      
+                  <td>テスト自動化　入門</td>
+      
+                  <td>[Failure: Element id=hogehoge not found]</td>
+                  <td><a href="../screenshots/hindai-search-fail_20160119_110428903_5_fail.png">1:fail</a></td>
+                </tr>
+    
+              </tbody>
+            </table>
+          </div><!-- contents -->
+        </li><!-- no white spaces between LI tags.
+     --><li>
+          <input name="tab1" id="tab1_log" type="radio">
+          <label for="tab1_log" class="tab_log" onclick="selectTab(this)">Log</label>
+          <div class="contents">
+            <pre>[2016-01-19 11:04:19.704 +09:00] [INFO] Start: TestCase[test-suite] (hindai-search-fail.html)
+[2016-01-19 11:04:19.704 +09:00] [INFO] baseURL: http://www.yahoo.co.jp
+[2016-01-19 11:04:19.715 +09:00] [INFO] &lt;1&gt; Command#1: open(&quot;/&quot;)
+[2016-01-19 11:04:21.425 +09:00] [INFO] - [Success] URL: [http://www.yahoo.co.jp/] / Title: [Yahoo! JAPAN]
+[2016-01-19 11:04:21.425 +09:00] [INFO] - Cookie: B=[a5hhtu9b9r6d2&amp;b=3&amp;s=au] (domain=.yahoo.co.jp, path=/, expire=2018-01-19 11:04:20 +09:00)
+[2016-01-19 11:04:21.425 +09:00] [INFO] - Cookie: btpdb.2wzBV9u.dGZjLjE0MzQzNDg=[VVNFUg] (domain=www.yahoo.co.jp, path=/, expire=2017-01-18 11:04:19 +09:00)
+[2016-01-19 11:04:21.425 +09:00] [INFO] - Cookie: btpdb.2wzBV9u.dGZjLjE0NDcxNDU=[UkVRVUVTVFMuMA] (domain=www.yahoo.co.jp, path=/, expire=2017-01-18 11:04:19 +09:00)
+[2016-01-19 11:04:21.425 +09:00] [INFO] - Cookie: btpdb.2wzBV9u.dGZjLjE5ODkzNTc=[REFZUw] (domain=www.yahoo.co.jp, path=/, expire=2016-01-20 11:04:19 +09:00)
+[2016-01-19 11:04:21.426 +09:00] [INFO] &lt;2&gt; Command#2: type(&quot;id=srchtxt&quot;, &quot;ヒン大&quot;)
+[2016-01-19 11:04:21.580 +09:00] [INFO] - [Success]
+[2016-01-19 11:04:21.580 +09:00] [INFO] &lt;3&gt; Command#3: clickAndWait(&quot;id=srchbtn&quot;)
+[2016-01-19 11:04:23.137 +09:00] [INFO] - [Success] URL: [http://search.yahoo.co.jp/search;_ylt=A2RA1CSimZ1WXkAATZeJBtF7?p=%E3%83%92%E3%83%B3%E5%A4%A7&amp;search.x=1&amp;fr=top_ga1_sa&amp;tid=top_ga1_sa&amp;ei=UTF-8&amp;aq=&amp;oq=&amp;afs=] / Title: [「ヒン大」の検索結果 - Yahoo!検索]
+[2016-01-19 11:04:23.137 +09:00] [INFO] - Cookie: B=[a5hhtu9b9r6d2&amp;b=3&amp;s=au] (domain=.yahoo.co.jp, path=/, expire=2018-01-19 11:04:20 +09:00)
+[2016-01-19 11:04:23.138 +09:00] [INFO] - Cookie: JV=[3Hw1ouo04h7pNhMQ6hHCyc2AROALV9wg1myTc7OIOk_cD_8LRqJ_jWf9FF8IWn7nvlJ7mYIPBnenePICnTc7_xaOmwfKeShza9046EjO01KWdlQsEDUKSqcwNkPiqNs0pqXYvTncXRNkw4pB.SU_K16xFkqhbtaH6RFHKTkxn0rTWPBJoM8cCNdun4naUqEjZsXFVTexY7MWnYN9ltA5eFLe._xYNCFjR7s3cFGKMoLK4i6WypZh2BSVYFv1AJs.gR1arhTMk6eM8N_lf7VQjhRD0xWj2BQ9TS8R] (domain=.yahoo.co.jp, path=/, expire=2016-07-20 11:04:19 +09:00)
+[2016-01-19 11:04:23.138 +09:00] [INFO] - Cookie: SGL=[R4Pq6tabLv1VD_nWCcbPeN3_zPOHNkWFU2597CWXJywnTHTHfFJAkK32QjV09MuNzLcm5UaCAlfziyM_41mfcHEIJadxJLzBf0.mwTvRui3IVVDpxOBrpmzvCg7.tR3BRkjSK7n4OUNMciUYrZ9m86dy3tBlFiX.JCEMTpl_CjAaPR2ax1mJaPBNTlb6Z6zOUEd3uh3QQe55bmKpfnRv6kWkdcHvM17ippCZPy3xrW1Ll4v3fOFhmIAZHHGUdUVJs9EiOozrOfTnop.K5Wmd0NwDn6yk9pn.cE7Y1JsrX_DPP.R.IMx3p3GX3r6eM3tg] (domain=.search.yahoo.co.jp, path=/, expire=2016-02-18 11:04:20 +09:00)
+[2016-01-19 11:04:23.139 +09:00] [INFO] - Cookie: sB=[sbt=.Sf5rjmUJe25GfPszwoNLQvy3s8Phw--] (domain=.yahoo.co.jp, path=/, expire=2018-01-19 11:04:22 +09:00)
+[2016-01-19 11:04:23.139 +09:00] [INFO] &lt;4&gt; Command#4: clickAndWait(&quot;link=ヒンシツ大学 » ヒンシツ大学 | 株式会社SHIFT&quot;)
+[2016-01-19 11:04:28.659 +09:00] [INFO] - [Success] URL: [http://www.hinshitsu-univ.jp/] / Title: [ヒンシツ大学 » ヒンシツ大学 | 株式会社SHIFT]
+[2016-01-19 11:04:28.660 +09:00] [INFO] - Cookie: PREF=[f1=50000000] (domain=.youtube.com, path=/, expire=2016-09-18 22:57:25 +09:00)
+[2016-01-19 11:04:28.660 +09:00] [INFO] - Cookie: VISITOR_INFO1_LIVE=[ZdtCvb5bH7Q] (domain=.youtube.com, path=/, expire=2016-09-18 22:57:24 +09:00)
+[2016-01-19 11:04:28.660 +09:00] [INFO] - Cookie: YSC=[8TUq7haGxho] (domain=.youtube.com, path=/, expire=*)
+[2016-01-19 11:04:28.661 +09:00] [INFO] - Cookie: __ulfpc=[201601191104243812_f] (domain=.www.hinshitsu-univ.jp, path=/, expire=2023-01-19 11:04:24 +09:00)
+[2016-01-19 11:04:28.661 +09:00] [INFO] - Cookie: _ga=[GA1.2.1589086286.1453169066] (domain=.hinshitsu-univ.jp, path=/, expire=2018-01-18 11:04:25 +09:00)
+[2016-01-19 11:04:28.661 +09:00] [INFO] - Cookie: _gat=[1] (domain=.hinshitsu-univ.jp, path=/, expire=2016-01-19 11:14:25 +09:00)
+[2016-01-19 11:04:28.662 +09:00] [INFO] &lt;5&gt; Command#5: type(&quot;id=hogehoge&quot;, &quot;テスト自動化　入門&quot;)
+[2016-01-19 11:04:29.231 +09:00] [INFO] [[ATTACHMENT|<a href="../screenshots/hindai-search-fail_20160119_110428903_5_fail.png">C:\temp\SeleneseRunnerSample\test-results\screenshots\hindai-search-fail_20160119_110428903_5_fail.png</a>]]
+[2016-01-19 11:04:29.255 +09:00] [ERROR] Command#5: type(&quot;id=hogehoge&quot;, &quot;テスト自動化　入門&quot;) =&gt; [Failure: Element id=hogehoge not found]
+[2016-01-19 11:04:29.256 +09:00] [ERROR] - Cookie: PREF=[f1=50000000] (domain=.youtube.com, path=/, expire=2016-09-18 22:57:25 +09:00)
+[2016-01-19 11:04:29.256 +09:00] [ERROR] - Cookie: VISITOR_INFO1_LIVE=[ZdtCvb5bH7Q] (domain=.youtube.com, path=/, expire=2016-09-18 22:57:24 +09:00)
+[2016-01-19 11:04:29.256 +09:00] [ERROR] - Cookie: YSC=[8TUq7haGxho] (domain=.youtube.com, path=/, expire=*)
+[2016-01-19 11:04:29.256 +09:00] [ERROR] - Cookie: __ulfpc=[201601191104243812_f] (domain=.www.hinshitsu-univ.jp, path=/, expire=2023-01-19 11:04:24 +09:00)
+[2016-01-19 11:04:29.256 +09:00] [ERROR] - Cookie: _ga=[GA1.2.1589086286.1453169066] (domain=.hinshitsu-univ.jp, path=/, expire=2018-01-18 11:04:25 +09:00)
+[2016-01-19 11:04:29.256 +09:00] [ERROR] - Cookie: _gat=[1] (domain=.hinshitsu-univ.jp, path=/, expire=2016-01-19 11:14:25 +09:00)
+[2016-01-19 11:04:29.258 +09:00] [INFO] End(9.553sec): TestCase[test-suite] (hindai-search-fail.html)
+</pre>
+  
+          </div>
+        </li>
+      </ul>
+    </div><!-- tabs -->
+    <p>[<a href="#">Top</a>]</p>
+
+  </body>
+</html>
